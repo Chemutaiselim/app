@@ -29,14 +29,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+        android:background="@drawable/ic_baseline_chevron_left_24" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -48,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.086"
-        app:srcCompat="@drawable/ic_baseline_lock_open_24" />
+        android:background="@drawable/ic_baseline_layers_2" />
 
     <TextView
         android:id="@+id/textView2"
@@ -67,19 +61,20 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:layout_marginTop="40dp"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="  email"
         android:textColor="#42000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.128" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button5"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:text="SUBMIT"
@@ -91,5 +86,6 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.315" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
