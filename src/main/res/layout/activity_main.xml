@@ -13,8 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
         android:layout_centerInParent="true"
-
-
         android:text="Logo Here"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -29,8 +27,6 @@
         android:layout_alignLeft="@+id/textview"
         android:layout_centerInParent="true"
         android:layout_marginStart="35dp"
-
-
         android:layout_marginLeft="35dp"
         android:layout_marginTop="-102dp"
         android:background="@drawable/ic_baseline_layers_24"
