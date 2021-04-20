@@ -6,11 +6,12 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/confirm_password_create_account"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="confirm password "
         android:paddingLeft="20dp"
@@ -20,14 +21,14 @@
         android:textColor="#42000000"
         android:textColorHint="#42000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/password_create_account"
         app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/password_create_account"
+        app:layout_constraintTop_toBottomOf="@+id/password_create_account"
         app:layout_constraintVertical_bias="0.086" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/back_create_account"
         android:layout_width="35sp"
         android:layout_height="32sp"
         android:background="@drawable/ic_baseline_chevron_left_24"
@@ -54,11 +55,12 @@
         app:layout_constraintVertical_bias="0.051" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/first_name"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="first name"
         android:inputType="textPersonName"
@@ -76,11 +78,12 @@
         app:layout_constraintVertical_bias="0.069" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/last_name"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="last name"
         android:inputType="textPersonName"
@@ -91,18 +94,19 @@
         android:textColor="#42000000"
         android:textColorHint="#42000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/first_name"
         app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/first_name"
         app:layout_constraintVertical_bias="0.041" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/email_create_account"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="email"
         android:inputType="textEmailAddress"
@@ -113,18 +117,19 @@
         android:textColor="#42000000"
         android:textColorHint="#42000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/last_name"
         app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toStartOf="@+id/last_name"
+        app:layout_constraintTop_toBottomOf="@+id/last_name"
         app:layout_constraintVertical_bias="0.035" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/password_create_account"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
@@ -135,14 +140,14 @@
         android:textColor="#42000000"
         android:textColorHint="#42000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintEnd_toEndOf="@+id/email_create_account"
         app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintStart_toStartOf="@+id/email_create_account"
+        app:layout_constraintTop_toBottomOf="@+id/email_create_account"
         app:layout_constraintVertical_bias="0.067" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/submit_create_account"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:background="@drawable/btn"
@@ -151,10 +156,10 @@
         app:backgroundTint="#FF3382"
         app:cornerRadius="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_password_create_account"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
+        app:layout_constraintStart_toStartOf="@+id/confirm_password_create_account"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_create_account"
         app:layout_constraintVertical_bias="0.292" />
 
     <TextView
@@ -167,11 +172,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.366"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/submit_create_account"
         app:layout_constraintVertical_bias="0.603" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/login_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -182,6 +187,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.722"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/submit_create_account"
         app:layout_constraintVertical_bias="0.6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
