@@ -1,4 +1,4 @@
 package com.pamela.projo
 
-class sign_up {
+class fist_page {
 }
