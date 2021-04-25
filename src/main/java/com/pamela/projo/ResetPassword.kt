@@ -24,6 +24,7 @@ class ResetPassword : AppCompatActivity() {
         back_forgot_password.setOnClickListener{
             startActivity(Intent(this,MainActivity::class.java))
             finish()
+
         }
 
 

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#FFFFFF"
-    >
+    android:background="#FFFFFF">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -34,7 +31,9 @@
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="@+id/password_create_account"
         app:layout_constraintTop_toBottomOf="@+id/password_create_account"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.086"
+        android:paddingEnd="10dp"
+        android:drawableStart="@drawable/ic_baseline_lock_24" />
 
     <ImageView
         android:id="@+id/back_create_account"
@@ -46,7 +45,8 @@
         app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.048"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView3"
@@ -84,7 +84,10 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintVertical_bias="0.069"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:drawableStart="@drawable/ic_baseline_person_outline_24" />
 
     <EditText
         android:id="@+id/last_name"
@@ -107,7 +110,10 @@
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="@+id/first_name"
         app:layout_constraintTop_toBottomOf="@+id/first_name"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.041"
+        android:drawableStart="@drawable/ic_baseline_person_outline_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp" />
 
     <EditText
         android:id="@+id/email_create_account"
@@ -130,7 +136,10 @@
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="@+id/last_name"
         app:layout_constraintTop_toBottomOf="@+id/last_name"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.035"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp" />
 
     <EditText
         android:id="@+id/password_create_account"
@@ -153,7 +162,10 @@
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="@+id/email_create_account"
         app:layout_constraintTop_toBottomOf="@+id/email_create_account"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.067"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp" />
 
     <Button
         android:id="@+id/submit_create_account"

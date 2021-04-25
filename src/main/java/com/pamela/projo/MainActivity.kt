@@ -28,20 +28,21 @@ class MainActivity : AppCompatActivity() {
 
         signup_login_page.setOnClickListener {
 
-            val i = Intent(this, AccountSetUp::class.java)
+            val i = Intent(applicationContext, AccountSetUp::class.java)
             startActivity(i)
+            finish()
 
         }
 
         textView7.setOnClickListener {
-            val i = Intent(this, ResetPassword::class.java)
+            val i = Intent(applicationContext, ResetPassword::class.java)
             startActivity(i)
+            finish()
 
 
         }
         login_btn_login_page.setOnClickListener {
             signInUser()
-            finish()
         }
 
     }

@@ -36,6 +36,7 @@ class AccountSetUp:AppCompatActivity() {
         back_create_account.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+
         }
 
         submit_create_account.setOnClickListener {
