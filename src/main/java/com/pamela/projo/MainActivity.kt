@@ -31,6 +31,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        textView7.setOnClickListener {
+            val i = Intent(this, reset_password::class.java)
+            startActivity(i)
+
+        }
         login_btn_login_page.setOnClickListener {
             signInUser()
         }
@@ -40,7 +46,6 @@ class MainActivity : AppCompatActivity() {
     private fun signInUser(){
         signInEmail=email_login_page.text.toString().trim()
         signInPassword=password_login_page.text.toString().trim()
-
         if (notEmpty()){
             auth.signInWithEmailAndPassword(signInEmail,signInPassword).addOnCompleteListener { signIn->
                 if(signIn.isSuccessful){
@@ -55,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         }else{
             signInInputArray.forEach { input->
                 if(input.text.toString().trim().isEmpty()){
-                    input.error="${input.hint}is required :|"
+                    input.error="${input.hint}is required :)"
                 }
             }
         }
