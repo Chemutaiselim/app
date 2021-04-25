@@ -13,10 +13,9 @@ import kotlinx.android.synthetic.main.activity_2.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-
-    lateinit var signInEmail: String
-    lateinit var signInPassword: String
-    lateinit var signInInputArray: Array<EditText>
+    private lateinit var signInEmail: String
+    private lateinit var signInPassword: String
+    private lateinit var signInInputArray: Array<EditText>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,16 +25,18 @@ class MainActivity : AppCompatActivity() {
 
         signInInputArray = arrayOf(email_login_page, password_login_page)
 
+
         signup_login_page.setOnClickListener {
-            val i = Intent(this, acoount_set_up::class.java)
+
+            val i = Intent(this, AccountSetUp::class.java)
             startActivity(i)
-            finish()
+
         }
 
         textView7.setOnClickListener {
-            val i = Intent(this, reset_password::class.java)
+            val i = Intent(this, ResetPassword::class.java)
             startActivity(i)
-            finish()
+
 
         }
         login_btn_login_page.setOnClickListener {
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         if (notEmpty()){
             auth.signInWithEmailAndPassword(signInEmail,signInPassword).addOnCompleteListener { signIn->
                 if(signIn.isSuccessful){
-                    val i = Intent(this, fist_page::class.java)
+                    val i = Intent(applicationContext, FirstPage::class.java)
                     startActivity(i)
                     Toast.makeText(this,"LogIn Successful :)",Toast.LENGTH_LONG).show()
                     finish()

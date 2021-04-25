@@ -7,12 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.welcome.*
 
-class fist_page: AppCompatActivity() {
+class FirstPage: AppCompatActivity() {
 
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

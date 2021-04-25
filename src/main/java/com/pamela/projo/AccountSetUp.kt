@@ -11,22 +11,22 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity4.*
 
-class acoount_set_up:AppCompatActivity() {
+class AccountSetUp:AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    lateinit var UserEmail: String
-    private lateinit var UserPassword: String
-    private lateinit var CreateAccountInputArray: Array<EditText>
+    private lateinit var userEmail: String
+    private lateinit var userPassword: String
+    private lateinit var createAccountInputArray: Array<EditText>
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity4)
+
 
         auth = Firebase.auth
 
-        CreateAccountInputArray = arrayOf(
+        createAccountInputArray = arrayOf(
             first_name,
             last_name,
             email_create_account,
@@ -54,7 +54,7 @@ class acoount_set_up:AppCompatActivity() {
         super.onStart()
         val user: FirebaseUser? = firebaseAuth.currentUser
         user?.let {
-            startActivity(Intent(this, fist_page::class.java))
+            startActivity(Intent(this, FirstPage::class.java))
             Toast.makeText(this, "Welcome Back $last_name :),", Toast.LENGTH_LONG).show()
 
         }
@@ -76,7 +76,7 @@ class acoount_set_up:AppCompatActivity() {
         ) {
             identical = true}
         else if (!notEmpty()) {
-            CreateAccountInputArray.forEach { input ->
+            createAccountInputArray.forEach { input ->
                 if (input.text.toString().trim().isEmpty()) {
                     input.error = "${input.hint} is required :|"
                 }
@@ -91,14 +91,14 @@ class acoount_set_up:AppCompatActivity() {
 
     private fun signIn(){
         if (identicalPassword()){
-            UserEmail=email_create_account.text.toString().trim()
-            UserPassword=password_create_account.text.toString().trim()
+            userEmail=email_create_account.text.toString().trim()
+            userPassword=password_create_account.text.toString().trim()
 
-            firebaseAuth.createUserWithEmailAndPassword(UserEmail,UserPassword).addOnCompleteListener { task->
+            firebaseAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener { task->
                 if (task.isSuccessful){
                     Toast.makeText(this,"Created Account Successfully :)!",Toast.LENGTH_SHORT).show()
                     sendEmailVerification()
-                    startActivity(Intent(this,fist_page::class.java))
+                    startActivity(Intent(this,FirstPage::class.java))
                     finish()
                 }
                 else{
@@ -112,7 +112,7 @@ class acoount_set_up:AppCompatActivity() {
         firebaseUser?.let {
             it.sendEmailVerification().addOnCompleteListener { task->
                 if(task.isSuccessful){
-                    Toast.makeText(this,"Email Verification sent to $UserEmail",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Email Verification sent to $userEmail",Toast.LENGTH_SHORT).show()
                 }
             }
         }
