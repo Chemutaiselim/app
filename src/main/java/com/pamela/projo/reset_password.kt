@@ -24,6 +24,7 @@ class reset_password : AppCompatActivity() {
 
         Submit_forgot_password.setOnClickListener {
             sendEmail()
+            finish()
         }
     }
     private fun notEmpty(): Boolean =Email.isNotEmpty()

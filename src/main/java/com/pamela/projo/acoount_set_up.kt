@@ -33,10 +33,15 @@ class acoount_set_up:AppCompatActivity() {
             password_create_account,
             confirm_password_create_account
         )
+        back_create_account.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
 
         submit_create_account.setOnClickListener {
             signIn()
         }
+
         login_create_account.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             Toast.makeText(this, "Please LogIn to your Account :|", Toast.LENGTH_SHORT).show()

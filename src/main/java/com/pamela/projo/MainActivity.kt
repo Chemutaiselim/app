@@ -35,10 +35,12 @@ class MainActivity : AppCompatActivity() {
         textView7.setOnClickListener {
             val i = Intent(this, reset_password::class.java)
             startActivity(i)
+            finish()
 
         }
         login_btn_login_page.setOnClickListener {
             signInUser()
+            finish()
         }
 
     }
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 if(signIn.isSuccessful){
                     val i = Intent(this, fist_page::class.java)
                     startActivity(i)
-                    Toast.makeText(this,"Log In Successful :)",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"LogIn Successful :)",Toast.LENGTH_LONG).show()
                     finish()
                 }else{
                     Toast.makeText(this,"LogIn Failed :(",Toast.LENGTH_SHORT).show()
