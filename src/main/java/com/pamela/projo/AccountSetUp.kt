@@ -11,7 +11,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity4.*
 
-class AccountSetUp:AppCompatActivity() {
+class AccountSetUp : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var userEmail: String
     private lateinit var userPassword: String
@@ -22,7 +22,7 @@ class AccountSetUp:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContentView(R.layout.activity4)
 
         auth = Firebase.auth
 

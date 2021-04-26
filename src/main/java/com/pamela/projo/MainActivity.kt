@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         }else{
             signInInputArray.forEach { input->
                 if(input.text.toString().trim().isEmpty()){
-                    input.error="${input.hint}is required :)"
+                    input.error="${input.hint} is required :)"
                 }
             }
         }
